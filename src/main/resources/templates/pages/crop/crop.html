@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorator="layouts/default_layout">
+
+<!--
+#####################################################################################################
+#
+#    @author  91218672
+#    @since   2019. 01. 18.
+#    @version 1.0.0
+#    @Description : crop
+#
+#####################################################################################################
+-->
+
+<!-- page title -->
+<th:block layout:fragment="title">
+    <title>Main</title>
+</th:block>
+
+<!-- custom css -->
+<th:block layout:fragment="css">
+    <link rel="stylesheet" type="text/css" media="screen" th:href="@{/css/croppie.css}" />
+    <style th:inline="text">
+    </style>
+</th:block>
+
+<!-- custom top js -->
+<th:block layout:fragment="topScript">
+    <script th:inline="javascript">
+        /*<![CDATA[*/
+        let thisPage = {};
+        thisPage['ctxPath'] = /*[[@{/}]]*/ '/';
+        console.log("thisPage", thisPage);
+        /*]]>*/
+    </script>
+</th:block>
+
+<!-- Contents div -->
+<div id="contents" layout:fragment="contents">
+    <div class="jumbotron">
+        <h3 align="center">Image Crop & Upload</h3>
+        <div class="panel panel-default">
+            <div class="panel-body" align="center">
+                <input type="file" name="selectImage" id="selectImage"  accept="image/*" />
+                <br />
+                <div id="uploadedImage"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- end Contents div -->
+
+<!-- custom bottom js -->
+<th:block layout:fragment="bottomScript">
+    <script type="text/javascript" th:src="@{/js/libs/croppie.min.js}"></script>
+    <script type="text/javascript" th:src="@{/js/pages/crop/crop.js}"></script>
+</th:block>
+
+</html>
+<!-- modal -->
+<div id="uploadImageModal" class="modal" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">Upload & Crop Image</h4>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-8 text-center">
+                        <div id="targetImage" style="width:350px; margin-top:30px"></div>
+                    </div>
+                    <div class="col-md-4" style="padding-top:30px;">
+                        <br />
+                        <br />
+                        <br/>
+                        <button id="uploadImage" class="btn btn-success">Crop & Upload Image</button>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default close-modal" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>

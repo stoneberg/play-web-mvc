@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org"
+    xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+
+    <head th:fragment="importFragment">
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+        <!-- Default Title -->
+        <th:block layout:fragment="title"><title>Hello World!</title></th:block>
+        <!-- Favicon -->
+        <link rel="shortcut icon" type="image/x-icon" th:href="@{/images/favicon.png}" />
+        <!-- Basic Styles -->
+        <link rel="stylesheet" type="text/css" media="screen" th:href="@{/css/bootstrap.min.css}" />
+        <link rel="stylesheet" type="text/css" media="screen" th:href="@{/css/blog.css}" />
+        <link rel="stylesheet" type="text/css" media="screen" th:href="@{/css/indicator.css}" />
+        <!-- Custom CSS -->
+        <th:block layout:fragment="css"></th:block>
+        <!-- Base libs JS -->
+        <script type="text/javascript" th:src="@{/js/libs/jquery-3.5.1.min.js}"></script>
+        <script type="text/javascript" th:src="@{/js/libs/popper.min.js}"></script>
+        <script type="text/javascript" th:src="@{/js/libs/bootstrap.min.js}"></script>
+        <script type="text/javascript" th:src="@{/js/libs/underscore.min.js}"></script>
+        <script type="text/javascript" th:src="@{/js/libs/moment.min.js}"></script>
+        <script type="text/javascript" th:src="@{/js/libs/jquery.blockUI.js}"></script>
+        <script type="text/javascript" th:src="@{/js/libs/vue.min.js}"></script>
+        <!-- Custom Common JS -->
+        <th:block layout:fragment="topScript"></th:block>
+    </head>
+
+</html>

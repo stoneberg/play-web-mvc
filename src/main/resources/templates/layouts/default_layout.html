@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+
+    <head th:replace="fragments/import :: importFragment"></head>
+
+    <body>
+        <!-- wrap div -->
+        <div class="container">
+        
+            <!-- header -->
+            <header th:replace="fragments/header :: headerFragment"></header>
+            
+            <!--s:container-->
+            <div class="content">
+                
+               <!-- Left wrap div -->
+               <!--<div th:replace="fragments/leftAside :: leftAsideFragment"></div>-->
+               <!-- end Left wrap div -->
+                
+               <!-- contents -->
+               <div layout:fragment="contents">
+                   <!-- contents are here -->
+                   <!-- contents are here -->
+                   <!-- contents are here -->
+                   <!-- contents are here -->
+                   <!-- contents are here -->
+                   <!-- contents are here -->
+                   <!-- contents are here -->
+                   <!-- contents are here -->
+                   <!-- contents are here -->
+               </div>
+
+                <!-- footer -->
+                <footer th:replace="fragments/footer :: footerFragment"></footer>
+
+            </div>
+            <!--e:container-->
+
+        </div>
+        <!-- end wrap div -->
+    </body>
+
+</html>

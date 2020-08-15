@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+    xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+    layout:decorator="layouts/default_layout">
+    
+<!--
+#####################################################################################################
+#                                                                                                   
+#    @author  91218672                                                                              
+#    @since   2019. 01. 18.                                                                         
+#    @version 1.0.0                                                                                 
+#    @Description : main
+#                                                                                                   
+#####################################################################################################
+-->
+
+    <!-- page title -->
+    <th:block layout:fragment="title">
+        <title>Main</title>
+    </th:block>
+    
+    <!-- custom css -->
+    <th:block layout:fragment="css">
+        <style th:inline="text">
+        </style>
+    </th:block>
+    
+    <!-- custom top js -->
+    <th:block layout:fragment="topScript">
+        <script th:inline="javascript">
+        /*<![CDATA[*/
+        let thisPage = {};
+        thisPage['ctxPath'] = /*[[@{/}]]*/ '/';
+        console.log("thisPage", thisPage);
+        /*]]>*/
+        </script>
+    </th:block>
+    
+    <!-- Contents div -->
+    <div id="contents" layout:fragment="contents">
+        <div class="jumbotron p-3 p-md-5 text-white rounded bg-dark">
+            <div class="col-md-6 px-0">
+                <h1 class="display-4 font-italic">Title of a longer featured blog post</h1>
+                <p class="lead my-3">Multiple lines of text that form the lede, informing new readers quickly and efficiently about what's most interesting in this post's contents.</p>
+            </div>
+        </div>
+
+        <div class="row mb-2">
+            <div class="col-md-4">
+                <div class="card flex-md-row mb-4 shadow-sm h-md-230">
+                    <div class="card-body d-flex flex-column align-items-start">
+                        <strong class="d-inline-block mb-2 text-primary">Example #1</strong>
+                        <h3 class="mb-0">
+                            <a class="text-dark" href="#">Image Crop And Upload</a>
+                        </h3>
+                        <a th:href="@{/crop}">Continue reading</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card flex-md-row mb-4 shadow-sm h-md-230">
+                    <div class="card-body d-flex flex-column align-items-start">
+                        <strong class="d-inline-block mb-2 text-primary">Example #2</strong>
+                        <h3 class="mb-0">
+                            <a class="text-dark" href="#">Local Video Play</a>
+                        </h3>
+                        <a href="#">Continue reading</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card flex-md-row mb-4 shadow-sm h-md-230">
+                    <div class="card-body d-flex flex-column align-items-start">
+                        <strong class="d-inline-block mb-2 text-primary">Example #2</strong>
+                        <h3 class="mb-0">
+                            <a class="text-dark" href="#">Local Video Play</a>
+                        </h3>
+                        <a href="#">Continue reading</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card flex-md-row mb-4 shadow-sm h-md-230">
+                    <div class="card-body d-flex flex-column align-items-start">
+                        <strong class="d-inline-block mb-2 text-primary">Example #2</strong>
+                        <h3 class="mb-0">
+                            <a class="text-dark" href="#">Local Video Play</a>
+                        </h3>
+                        <a href="#">Continue reading</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card flex-md-row mb-4 shadow-sm h-md-230">
+                    <div class="card-body d-flex flex-column align-items-start">
+                        <strong class="d-inline-block mb-2 text-primary">Example #2</strong>
+                        <h3 class="mb-0">
+                            <a class="text-dark" href="#">Local Video Play</a>
+                        </h3>
+                        <a href="#">Continue reading</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card flex-md-row mb-4 shadow-sm h-md-230">
+                    <div class="card-body d-flex flex-column align-items-start">
+                        <strong class="d-inline-block mb-2 text-primary">Example #2</strong>
+                        <h3 class="mb-0">
+                            <a class="text-dark" href="#">Local Video Play</a>
+                        </h3>
+                        <a href="#">Continue reading</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card flex-md-row mb-4 shadow-sm h-md-230">
+                    <div class="card-body d-flex flex-column align-items-start">
+                        <strong class="d-inline-block mb-2 text-primary">Example #2</strong>
+                        <h3 class="mb-0">
+                            <a class="text-dark" href="#">Local Video Play</a>
+                        </h3>
+                        <a href="#">Continue reading</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card flex-md-row mb-4 shadow-sm h-md-230">
+                    <div class="card-body d-flex flex-column align-items-start">
+                        <strong class="d-inline-block mb-2 text-primary">Example #2</strong>
+                        <h3 class="mb-0">
+                            <a class="text-dark" href="#">Local Video Play</a>
+                        </h3>
+                        <a href="#">Continue reading</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card flex-md-row mb-4 shadow-sm h-md-230">
+                    <div class="card-body d-flex flex-column align-items-start">
+                        <strong class="d-inline-block mb-2 text-primary">Example #2</strong>
+                        <h3 class="mb-0">
+                            <a class="text-dark" href="#">Local Video Play</a>
+                        </h3>
+                        <a href="#">Continue reading</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card flex-md-row mb-4 shadow-sm h-md-230">
+                    <div class="card-body d-flex flex-column align-items-start">
+                        <strong class="d-inline-block mb-2 text-primary">Example #2</strong>
+                        <h3 class="mb-0">
+                            <a class="text-dark" href="#">Local Video Play</a>
+                        </h3>
+                        <a href="#">Continue reading</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card flex-md-row mb-4 shadow-sm h-md-230">
+                    <div class="card-body d-flex flex-column align-items-start">
+                        <strong class="d-inline-block mb-2 text-primary">Example #2</strong>
+                        <h3 class="mb-0">
+                            <a class="text-dark" href="#">Local Video Play</a>
+                        </h3>
+                        <a href="#">Continue reading</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card flex-md-row mb-4 shadow-sm h-md-230">
+                    <div class="card-body d-flex flex-column align-items-start">
+                        <strong class="d-inline-block mb-2 text-primary">Example #2</strong>
+                        <h3 class="mb-0">
+                            <a class="text-dark" href="#">Local Video Play</a>
+                        </h3>
+                        <a href="#">Continue reading</a>
+                    </div>
+                </div>
+            </div>
+            <!-- end -->
+        </div>
+    </div>
+    <!-- end Contents div -->
+    
+    <!-- custom bottom js -->
+    <th:block layout:fragment="bottomScript">
+        <script type="text/javascript" th:src="@{/js/pages/main/main.js}"></script>
+    </th:block>
+
+</html>
