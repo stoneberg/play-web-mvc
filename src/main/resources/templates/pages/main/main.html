@@ -2,15 +2,12 @@
 <html xmlns:th="http://www.thymeleaf.org"
     xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
     layout:decorator="layouts/default_layout">
-    
 <!--
 #####################################################################################################
-#                                                                                                   
-#    @author  91218672                                                                              
-#    @since   2019. 01. 18.                                                                         
+#    @author  stoneberg
+#    @since   2020. 08. 15.
 #    @version 1.0.0                                                                                 
 #    @Description : main
-#                                                                                                   
 #####################################################################################################
 -->
 
@@ -65,7 +62,7 @@
                         <h3 class="mb-0">
                             <a class="text-dark" href="#">Local Video Play</a>
                         </h3>
-                        <a href="#">Continue reading</a>
+                        <a th:href="@{/video}">Continue reading</a>
                     </div>
                 </div>
             </div>

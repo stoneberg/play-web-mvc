@@ -1,5 +1,11 @@
 server:
   port: 8080
+  servlet:
+    context-path: /
+    encoding:
+      charset: UTF-8
+      enabled: true
+      force: true
 
 logging:
   config: classpath:logback/logback-spring.xml

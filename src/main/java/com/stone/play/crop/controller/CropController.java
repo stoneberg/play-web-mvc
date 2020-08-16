@@ -23,7 +23,7 @@ public class CropController {
     private String fileLocation;
 
     @GetMapping
-    public ModelAndView main(ModelAndView mav) {
+    public ModelAndView video(ModelAndView mav) {
         mav.setViewName("pages/crop/crop");
         return mav;
     }

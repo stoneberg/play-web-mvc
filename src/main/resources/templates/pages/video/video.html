@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorator="layouts/default_layout">
+<!--
+#####################################################################################################
+#    @author  stoneberg
+#    @since   2020. 08. 15.
+#    @version 1.0.0
+#    @Description : crop
+#####################################################################################################
+-->
+
+<!-- page title -->
+<th:block layout:fragment="title">
+    <title>Main</title>
+</th:block>
+
+<!-- custom css -->
+<th:block layout:fragment="css">
+    <link rel="stylesheet" type="text/css" media="screen" th:href="@{/css/croppie.css}" />
+    <style th:inline="text">
+    </style>
+</th:block>
+
+<!-- custom top js -->
+<th:block layout:fragment="topScript">
+    <script th:inline="javascript">
+        /*<![CDATA[*/
+        let thisPage = {};
+        thisPage['ctxPath'] = /*[[@{/}]]*/ '/';
+        console.log("thisPage", thisPage);
+        /*]]>*/
+    </script>
+</th:block>
+
+<!-- Contents div -->
+<div id="contents" layout:fragment="contents">
+    <div class="card">
+        <input type="file" accept="video/*" />
+        <video id="esign-video" class="img-fluid" width="500" height="250" controls autoplay></video>
+        <div class="card-body">
+            <h4 class="card-title">Get / Set PlayTime</h4>
+            <button id="get" type="button">Get current time position</button>
+            <button id="set" type="button">Set time position to 5 seconds</button><br />
+        </div>
+    </div>
+</div>
+<!-- end Contents div -->
+
+<!-- custom bottom js -->
+<th:block layout:fragment="bottomScript">
+    <script type="text/javascript" th:src="@{/js/common/local.video-player.js}"></script>
+    <script type="text/javascript" th:src="@{/js/pages/video/video.js}"></script>
+</th:block>
+
+</html>

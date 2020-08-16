@@ -15,8 +15,13 @@ spring:
     database-platform: org.hibernate.dialect.PostgreSQLDialect
     hibernate.ddl-auto: create
     properties:
-      hibernate.default_batch_fetch_size: 500
-      hibernate.jdbc.lob.non_contextual_creation: true
+      hibernate:
+        jdbc.lob.non_contextual_creation: true
+        default_batch_fetch_size: 500
+        query:
+          in_clause_parameter_padding: true
+        naming:
+          physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
 
 app:
   file:
