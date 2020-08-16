@@ -11,7 +11,7 @@
     <groupId>com.stone.play</groupId>
     <artifactId>demo</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>play-crop-save</name>
+    <name>play-web-mvc</name>
     <description>Demo project for image crop and save</description>
 
     <properties>

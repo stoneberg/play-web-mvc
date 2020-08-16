@@ -46,6 +46,15 @@
             </div>
         </div>
     </div>
+    <br />
+    <div class="jumbotron" id="saveImage" style="display: none;">
+        <h5 align="center">Upload Image</h5>
+        <div class="panel panel-default">
+            <div class="text-center">
+                <img id="croppedImage" class="rounded" alt="croppedImage">
+            </div>
+        </div>
+    </div>
 </div>
 <!-- end Contents div -->
 
@@ -57,16 +66,16 @@
 
 </html>
 <!-- modal -->
-<div id="uploadImageModal" class="modal" role="dialog">
+<div id="previewModal" class="modal" role="dialog">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <h4 class="modal-title">Upload & Crop Image</h4>
+                <h4 class="modal-title">Crop & Upload Image</h4>
             </div>
             <div class="modal-body">
                 <div class="row">
                     <div class="col-md-8 text-center">
-                        <div id="targetImage" style="width:350px; margin-top:30px"></div>
+                        <div id="cropImage" style="width:350px; margin-top:30px"></div>
                     </div>
                     <div class="col-md-4" style="padding-top:30px;">
                         <br />
