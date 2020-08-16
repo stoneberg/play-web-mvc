@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <title>Error Page</title>
+    <link rel="shortcut icon" type="image/x-icon" th:href="@{/images/favicon.png}" />
+    <link rel="stylesheet" type="text/css" media="screen" th:href="@{/css/bootstrap.min.css}" />
+    <link rel="stylesheet" type="text/css" media="screen" th:href="@{/css/error.css}" />
+</head>
+<body>
+<div class="page-wrap d-flex flex-row align-items-center">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-12 text-center">
+                <span class="display-1 d-block" th:text="${statusCode}"></span>
+                <div th:text="${message}"></div>
+                <a th:href="@{/main}" class="btn btn-link">Back to Home</a>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
